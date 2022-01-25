@@ -41,7 +41,7 @@ http://localhost:5000/api/v1/groceries/products
 ```
 ## 6. Single Product
 ```bash
-http://localhost:5000/api/v1/groceries/product/<id>
+http://localhost:5000/api/v1/groceries/products/<id>
 ```
 ## 7. Product as per Category
 ```bash
