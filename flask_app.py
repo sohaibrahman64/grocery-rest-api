@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, Blueprint
+from flask import Flask, request, jsonify, Blueprint, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 
@@ -113,6 +113,10 @@ product_schema = ProductSchema()
 products_schema = ProductSchema(many=True)
 
 prefix = '/api/v1/groceries'
+
+@app.route('/')
+def index():
+    return render_template('landing_page.html')
 
 
 @app.route(prefix + '/categories', methods=['GET'])
