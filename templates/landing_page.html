@@ -1,0 +1,97 @@
+<html>
+<head>
+    <link rel="stylesheet" href={{url_for('static', filename='style.css')}}>
+</head>
+<body>
+    <span id="width" class="width-container"></span>
+    <header class="wrapper">
+        <a href="#" class="logo">Grocery Items RESTful APIs</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testing">Testing the APIs</a></li>
+                <li><a href="#explore-apis">Explore APIs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-left wrapper">
+        <h1>Welcome to Grocery RESTful APIs</h1>
+        <p>APIs for front-end developers to consume in their mobile or web application.</p>
+        <a href="#explore-apis" class="cta-btn">Explore APIs</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1619073181529-93e12b4f9a29?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxOTY4MDQ5Mg&ixlib=rb-1.2.1&q=85" alt="healthy dessert">
+
+    <section class="wrapper">
+        <ul class="testimonials">
+            <li>
+                <figure>
+                    <h4>Improve your Front-end Development Skills</h4>
+                    <blockquote>As a developer, requesting data from the server, consuming it and rendering it into useful information is essential for improving mobile/web development skills. With our Grocery RESTful APIs, you can create a request - response mechanism in your mobile/web app.</blockquote>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <h4>Easy To Implement</h4>
+                    <blockquote>The Grocery RESTful APIs uses HTTP GET method for communication. As a front-end developer, you do not have to worry about what has been coded on the server-side.</blockquote>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <h4>Lightweight Response</h4>
+                    <blockquote>REST mechanism relies on a stateless, client-server protocol HTTP. The Grocery RESTful APIs don't store previous requests or responses. Each request is processed independently.</blockquote>
+                </figure>
+            </li>
+        </ul>
+    </section>
+    <div class="about" id="about">
+        <h1>About</h1>
+            <p>The purpose of this site is to allow access to Grocery Items RESTful APIs for front-end developers.</p>
+            <p>If you are a front-end developer (mobile or web) and looking to consume APIs for your application</p>
+            <p>then Grocery Items RESTful APIs is the right choice.</p>
+            <p>And the good news is it is FREE!<p>
+
+    </div>
+    <div class="about" id="testing">
+        <h1>Testing</h1>
+            <p>Postman is one way to test the APIs. It is the most commonly used method nowadays.</p>
+            <p>All the  Grocery Items RESTful APIs can be accessed through GET method.</p>
+            <p>Also, the request header Content-Type can be specified with application/json value.</p>
+            <p>The next section lists down different request URLs of Grocery Items RESTful APIs</p>
+            <p>that can be accessed through Postman.</p>
+
+    </div>
+    <div style="text-align: center;" id="explore-apis">
+        <h1>Explore APIs</h1>
+        <ul>
+            <li>
+                <h2>1. Home Products</h2>
+                <p>Gets products that you can display on the home page of the mobile/web app.</p>
+                <a href="{{url_for('get_home_products')}}" class="cta-btn">Get Home Products</a>
+            </li>
+            <li>
+                <h2>2. Single Home Product</h2>
+                <p>Gets a single product by inserting the product id in the request url.</p>
+                <a href="{{url_for('get_single_home_product', id=12)}}" class="cta-btn">Get Single Home Product</a>
+            </li>
+            <li>
+                <h2>3. Categories</h2>
+                <p>Gets various categories of the groceries.</p>
+                <a href="{{url_for('get_categories')}}" class="cta-btn">Get Categories</a>
+            </li>
+            <li>
+                <h2>4. Single Category</h2>
+                <p>Gets a single category of the groceries by inserting the category id in the request url.</p>
+                <a href="{{url_for('get_category', id=5)}}" class="cta-btn">Get Single Category</a>
+            </li>
+            <li>
+                <h2>5. Products As Per Category</h2>
+                <p>Gets a products as per category by inserting the category id in the request url.</p>
+                <a href="{{url_for('get_products_as_per_category', category_id=12)}}" class="cta-btn">Get Products As Per Category</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
